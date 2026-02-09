@@ -103,14 +103,44 @@
         //     code to be executed
         // }
         
-        for($i=1; $i<=10; $i++){
-            for($j = 0 ; $j <=1 ;$j++){
-                echo $j."<br>"; 
-            }
-        }
+        // for($i=1; $i<=10; $i++){
+        //     for($j = 0 ; $j <=1 ;$j++){
+        //         echo $j."<br>"; 
+        //     }
+        // }
         
+        // String Functions
+
+        $text = "Hello";
+        echo strlen($text); // count the length of the string
+
+        echo"<br>";
+
+        echo str_word_count("Hello PHP World"); // count the number of words in the string
+
+        echo"<br>";
+
+        echo strrev("Hello"); // reverse the string
+
+        echo"<br>";
+
+        echo strpos("Hello World end", "end"); // find the position of the first occurrence of a substring in a string out Number of characters from the beginning of the string
+
+        echo"<br>";
+
+        $email = "meng@gmail.com"; // check if the email is valid by checking if it contains @ symbol
+        if(strpos($email,"@") !== false){
+            echo "Valid Email";
+        }
+        echo"<br>";
+        echo substr("Hello World",0,5); // extract a part of the string from the beginning to the 5th character
+
+        echo"<br>";
+        echo str_replace("PHP","World","Hello PHP "); // replace all occurrences of the search string with the replacement string
 
         
     ?>
+
+        
 </body>
 </html>
