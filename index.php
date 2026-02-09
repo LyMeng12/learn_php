@@ -7,7 +7,12 @@
 </head>
 <body>
     <?php
-        echo("jskdg");
+        $ver = 43;
+        if ($ver < 43) {
+            echo "Your version is up to date.";
+        } else {
+            echo "Please update your version.";
+        }
     ?>
 </body>
 </html>
