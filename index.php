@@ -6,38 +6,47 @@
     <title>Document</title>
 </head>
 <body>
-    <!--   -->
-    <?php
-
-        // Exercise1
-        // $name="Meng";
-        // $age=20;
-        // $county="Cambodia";
-        // echo"My name is {$name} <br> I am {$age} old <br> I live in {$county}";
-
-        // Exercise2 math
-        // $a=10;
-        // $b=20;
+    <form action="" method="POST">
+        <div>
+            <label for="Username">Your-Name:</label>
+            <input type="text" name="name" id="name" placeholder="Enter Your Name...">
+        </div>
+        <div>
+            <label for="age">Your-Age:</label>
+            <input type="Number" name="age" id="age" placeholder="Enter Your Age...">
+        </div>
+        <div>
+            <label for="price">Price:</label>
+            <input type="Number" name="price" id="price" placeholder="Enter Your Price...">
+        </div>
+        <div>
+            <label for="vat">VAT:</label>
+            <select name="vat" id="vat">
+                <option>VAT</option>
+                <option value="10">10%</option>
+                <option value="20">20%</option>
+            </select>
+        </div>
+        <input type="submit" name="submit" id="" value="Submit">
         
-        // echo "Sum= ".($a+$b);
-        // echo"<br>";
-        // echo "Subtract= ".($a-$b);
-        // echo"<br>";
-        // echo "Multiply= ".($a*$b);
-        // echo"<br>";
-        // echo "Divide= ".($a/$b);
+    </form>
+    <?php
+        if(isset($_POST['submit'])){
+            $name = htmlspecialchars($_POST['name']);
+            $age = (int)$_POST['age'];
+            $price = (float)$_POST['price'];
+            $vat = (float)$_POST['vat'];
 
-        // Exercise3
-        $price=100;
-        $vat=10;
-        echo"Price=100$<br>";
-        echo"VAT=10%<br>";
-        echo"Total= ".(($price*$vat)/100);
+            echo "<h2>WelCome {$name}</h2>";
 
-
-
-
-
+            echo "Your Name: ".$name."<br>";
+            echo "Your Age: ".$age."<br>";
+            echo "Your Price: ".$price."<br>";
+            echo "VAT: ".$vat."<br>";
+            echo "<hr>";
+            echo "Total Price: ".(($price*$vat)/100);
+            
+        }
     ?>
 
         
